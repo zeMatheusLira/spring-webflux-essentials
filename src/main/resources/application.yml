@@ -1,0 +1,20 @@
+#spring.application.name=spring-webflux-essentials
+custom:
+  jvmArgs: "-XX:+AllowRedefinitionToAddDeleteMethods"
+
+spring:
+  r2dbc:
+    url: r2dbc:postgresql://localhost:5432/postgres?schema=anime
+    username: postgres
+    password: 123456
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+
+server:
+  error:
+    include-stacktrace: on_param
